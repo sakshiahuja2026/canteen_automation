@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!-- Site Metas -->
+    <title>
+        {% block title %}
+
+        {% endblock title %}
+    </title>
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico" type="image/x-icon'%}">
+    <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png'%}">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+{% block heder %}
+<!DOCTYPE html>
+
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!-- Site Metas -->
+    <title>
+    
+    </title>
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico" type="image/x-icon'%}">
+    <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png'%}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+    <!--[if lt IE 9]>
+      <script src="{%  static 'https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js' %}"></script>
+      <script src="{%  static 'https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js' %}"></script>
+    <![endif]-->
+
+</head>
+<title> Food Empire</title>
+<body>
+
+	<!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container">
+				<a class="navbar-brand" href="index.html">
+					<img src="{% static 'D:\foodempire\user\static\images\logo.png'%}" alt="" />
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-rs-food">
+					<ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="{% url 'index' %} ">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="{% url 'viewall' %} ">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'about' %} ">About</a></li>
+            
+						
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Pages</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+                <!--<a class="dropdown-item" href="reservation.html">Reservation</a>-->
+                <a class="dropdown-item" href="{% url 'createreservation' %}">Reservation</a>
+								<a class="dropdown-item" href="{% url 'stuff' %}">Stuff</a>
+								<a class="dropdown-item" href="{% url 'gallery' %}">Gallery</a>
+								
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Blog</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+                <a class="dropdown-item" href="{% url 'user-registration' %}">Registration</a>
+								<a class="dropdown-item" href="{% url 'blog' %}">blog</a>
+								<a class="dropdown-item" href="{% url 'blog-single' %}">blog Single</a>
+                
+							</div>
+						</li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'createcontact' %} ">Contact</a></li>
+           <li class="nav-item"> <h3 class="nav-link">Hello {{request.user}}</h3>
+          <a style="color:red; text-align: center; font-size: smaller;" class="nav-link" href="normalindex">Sign Out</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'cart' %}">Cart</a></li>
+          <!--- <i class='fa fa-shopping-cart'><a class="nav-link" href="#>Cart</i>-->
+
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+{% endblock heder %}
+  {% block content %}{% endblock content %}
+  {% block js %}
+<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'js/popper.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- ALL PLUGINS -->
+	<script src="{% static 'js/jquery.superslides.min.js' %}"></script>
+	<script src="{% static 'js/images-loded.min.js' %}"></script>
+	<script src="{% static 'js/isotope.min.js' %}"></script>
+	<script src="{% static 'js/baguetteBox.min.js' %}"></script>
+	<script src="{% static 'js/form-validator.min.js' %}"></script>
+    <script src="{% static 'js/contact-form-script.js' %}"></script>
+    <script src="{%  static 'js/custom.js' %}"></script>
+{% endblock js %}
+</body>
+</html>

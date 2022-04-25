@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<table class="table">
+    <tr>
+        <thead class="thead-light">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Number</th>
+
+                </tr>
+            </tr>
+
+                </thead>
+                <tbody>
+                {% for reservation in reservations %}
+
+                <tr>
+                    <td>{{ reservation.Name }}</td>
+                    <td>{{ reservation.Email }}</td>
+                    <td>{{ reservation.Phone }}</td>
+                    <td>{{ reservation.Date }}</td>
+                    <td>{{ reservation.Time }}</td>
+                    <td>{{ reservation.Number }}</td>
+                    
+                </tr>
+
+                {% endfor %}
+
+                </tbody>
+
+            </table>
+{% endblock %}
+
+

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<table class="table">
+    <tr>
+        <thead class="thead-light">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Cost</th>
+                </tr>
+            </tr>
+
+                </thead>
+                <tbody>
+                {% for food in foods %}
+                
+                <tr>
+                    <td>{{food.id}}</td>
+                    <td>{{food.fname}}</td>
+                    <td>{{food.price}}</td>
+                    <td>{{food.Description}}</td>
+                    <td>{{food.cost}}</td>
+
+                    
+                </tr>
+            
+                {% endfor %}
+
+                </tbody>
+
+            </table>
+            
+{% endblock %}
+

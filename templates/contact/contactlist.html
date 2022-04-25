@@ -1,0 +1,35 @@
+<table class="table">
+    <tr>
+        <thead class="thead-light">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Number_people</th>
+                <th>Message</th>
+
+                </tr>
+            </tr>
+
+                </thead>
+                <tbody>
+                {% for contact in contacts %}
+
+                <tr>
+                    <td>{{contact.Name }}</td>
+                    <td>{{ contact.Email }}</td>
+                    <td>{{ contact.Phone }}</td>
+                    <td>{{ contact.Number_people }}</td>
+                     <td>{{ contact.Message }}</td>   
+     
+                    </td>
+                   
+                </tr>
+
+                {% endfor %}
+
+                </tbody>
+
+            </table>
+
+
+
