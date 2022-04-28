@@ -82,12 +82,12 @@ WSGI_APPLICATION = 'foodempire.wsgi.application'
 
 DATABASES = {
 'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'foodempire3',
         'USER':'postgres',
-        'PASSWORD':'postgres',
+        'PASSWORD':'202612',
         'HOST':'localhost',
-        'PORT':'5432'
+        'PORT':'5433'
     }
 }
 
@@ -100,6 +100,8 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
+
+
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
     {
